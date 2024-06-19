@@ -15,4 +15,9 @@ export async function routes(server: FastifyInstance, options: FastifyPluginOpti
     server.get("/customers", async (request: FastifyRequest, reply: FastifyReply) => {
         return new ListCustomersController().hendle(request, reply);
     })
+
+    server.delete("/delete-customer" async (request: FastifyRequest, reply: FastifyReply) => {
+        return new DeleteCustomerController().handle()request, reply);
+    })
+
 }
