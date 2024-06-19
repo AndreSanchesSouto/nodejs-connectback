@@ -10,16 +10,9 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://postgres:postgres@localhost:5432/nodeBack?schema=public"
+  url      = env("DATABASE_URL")
 }
 
 model Customer {
-  id         String    @id @default(uuid())
-  name       String
-  email      String
-  status     Boolean
-  created_at DateTime? @default(now())
-  updated_at DateTime? @default(now())
-
-  @@map("customer")
+  id String @id @default(uuid())
 }
