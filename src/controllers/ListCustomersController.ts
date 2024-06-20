@@ -3,7 +3,7 @@ import { FastifyRequest, FastifyReply } from "fastify";
 
 class ListCustomersController {
 
-    async hendle(request: FastifyRequest, reply: FastifyReply) {
+    async handle(request: FastifyRequest, reply: FastifyReply) {
         const listCostumerService = new ListCustomersService();
 
         const customers = await listCostumerService.execute();

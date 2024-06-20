@@ -1,14 +1,16 @@
 import { DeleteCustomerService } from "../services/DeleteCustomerService";
 import { FastifyRequest, FastifyReply } from "fastify"
 
-class DeleteCustomerController {
 
-    async hendle(request: FastifyRequest, reply: FastifyReply) {
-        const deleteCostumerService = new DeleteCustomerService(request);
+export class DeleteCustomerController {
 
-        const customers = await deleteCostumerService.execute();
+    async handle(request: FastifyRequest, reply: FastifyReply) {
+        const { id } = request.query as { id:string } 
+        const deleteCostumerService = new DeleteCustomerService();
 
-        reply.send(customers)
+        const customer = await deleteCostumerService.execute({ id });
+
+        reply.send(customer)
     } 
 
 }
