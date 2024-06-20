@@ -25,7 +25,7 @@ class DeleteCustomerService {
             }
         })
 
-        return { message: "Deletado com sucesso" }
+        return { message: `Cliente "${customer.name}" deletado com sucesso` }
     }
 
 
