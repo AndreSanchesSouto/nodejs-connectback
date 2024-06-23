@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "bfa925a3-f1f9-4f36-94dc-7d85b90b8edb",
+		"_postman_id": "5c7a7cdd-ef61-4906-96ba-93243354adeb",
 		"name": "Nodejs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "36312955"
+		"_exporter_id": "36258886"
 	},
 	"item": [
 		{
@@ -35,7 +35,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"Maria\",\n    \"email\": \"mariana@mail.com\",\n    \"password\": \"senhasegura\"\n}",
+							"raw": "{\n    \"name\":\"Minhas\",\n    \"email\": \"meu@mail.com\",\n    \"password\": \"senhasegura\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -51,6 +51,31 @@
 							"port": "8080",
 							"path": [
 								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer-delete?id=ffea206f-7dca-455e-a6eb-84be2b0c41f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer-delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "ffea206f-7dca-455e-a6eb-84be2b0c41f5"
+								}
 							]
 						}
 					},
